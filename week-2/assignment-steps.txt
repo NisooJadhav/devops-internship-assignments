@@ -1,0 +1,57 @@
+1. Setup a remote repository in Local , Add a file and commit or save the changes and push to master branch.
+
+cd z:
+mkdir git-demo
+cd git-demo
+
+//initializing git repo
+git init 
+
+//creating file
+echo "some long content" > file.txt
+
+//staging the file
+git add file.txt
+
+//committing the changes
+git commit -m "initial creation & changes"
+
+//setting up remote repository
+git remote add origin https://github.com/nisoojadhav/devops-assignment-
+
+//pushing to master branch
+git push -u origin master
+
+------------------------------------------------------------------------------------------------------------------------------
+2. Create a new branch then commit and push the changes to new branch and merge it with the master branch using pull request.
+
+//creating new branch
+git checkout -b new-branch
+
+//staging & committing
+git add . ; git commit -m "made changes for question 2"
+
+//pushing
+git push origin new-branch
+
+//merge with pull request
+go to:
+https://github.com/NisooJadhav/devops-internship-assignments
+
+Compare & Pull Request -> add title -> create pull request -> merge pull request
+(Screenshots attached in Zip)
+
+------------------------------------------------------------------------------------------------------------------------------
+3. Undo the last commit or remove the last created file from remote repo using CLI.
+
+//undo last commit
+git reset --soft HEAD~1
+
+//remove last created file from remote repo
+git rm --cached file.txt
+git commit -m "Removed file.txt"
+git push origin new-branch
+
+------------------------------------------------------------------------------------------------------------------------------
+4. Resolve a merge conflicts.
+5. Practice More git commands.
